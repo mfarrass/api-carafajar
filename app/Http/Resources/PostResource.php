@@ -3,6 +3,7 @@
 namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
+// PostResource.php digunakan untuk hasil array (lebih dari 1)
 
 class PostResource extends JsonResource
 {

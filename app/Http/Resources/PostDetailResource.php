@@ -3,6 +3,7 @@
 namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
+// PostDetailResource.php digunakan untuk menampilkan 1 data secara detail
 
 class PostDetailResource extends JsonResource
 {
@@ -14,13 +15,14 @@ class PostDetailResource extends JsonResource
      */
     public function toArray($request)
     {
+        // set data detail yang ingin ditampilkan
         return [
             'id' => $this->id,
             'title' => $this->title,
             'news_content' => $this->news_content,
             'created_at' => date_format($this->created_at, "Y/m/d H:i:s"),
             'author' => $this->author,
-            'writer' => $this->whenLoaded('writer')
+            'writer' => $this->whenLoaded('writer') // eager loading 
         ];
     }
 }

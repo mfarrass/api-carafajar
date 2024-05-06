@@ -11,12 +11,14 @@ class PostController extends Controller
 {
     function index() 
     {
+        // mendapatkan semua data all
         $posts = Post::all();
         return PostResource::collection($posts);
     }
 
     function show($id)
     {
+        // mendapatkan 1 data berdasarkan id 
         $post = Post::with('writer:id,username')->findOrFail($id);
         return new PostDetailResource($post);
     }
