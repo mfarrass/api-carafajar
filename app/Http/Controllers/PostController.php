@@ -5,27 +5,54 @@ namespace App\Http\Controllers;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use App\Http\Resources\PostResource;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Resources\PostDetailResource;
 
 class PostController extends Controller
 {
-    function index() 
+    public function index()
     {
         // mendapatkan semua data all
         $posts = Post::all();
-        return PostResource::collection($posts);
+        return PostDetailResource::collection($posts->loadMissing('writer:id,username'));
     }
 
-    function show($id)
+    public function show($id)
     {
         // mendapatkan 1 data berdasarkan id 
         $post = Post::with('writer:id,username')->findOrFail($id);
         return new PostDetailResource($post);
     }
 
-    function show2($id)
+    public function store(Request $request)
+    {
+        $validated = $request->validate([
+            'title' => 'required|max:255',
+            'news_content' => 'required',
+        ]);
+
+        $request['author'] = Auth::user()->id;
+        $post = Post::create($request->all());
+        return new PostDetailResource($post->loadMissing('writer:id,username'));
+    }
+
+    public function update(Request $request, $id) // request untuk menagkap inputan dari user, $id untuk menamngkap postingan yang ingin di update
+    {
+        $validated = $request->validate([
+            'title' => 'required|max:255',
+            'news_content' => 'required',
+        ]);
+
+        $post = Post::findOrFail($id);
+        $post->update($request->all());
+        return new PostDetailResource($post->loadMissing('writer:id,username'));
+    }
+
+    public function destroy($id)
     {
         $post = Post::findOrFail($id);
-        return new PostDetailResource($post);
+        $post->delete();
+
+        return new PostDetailResource($post->loadMissing('writer:id,username'));
     }
 }
