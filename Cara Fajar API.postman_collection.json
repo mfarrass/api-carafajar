@@ -1,0 +1,405 @@
+{
+	"info": {
+		"_postman_id": "12c4c315-e97d-4351-8f4f-de6908dbd4a0",
+		"name": "Cara Fajar API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21487819"
+	},
+	"item": [
+		{
+			"name": "Posts",
+			"item": [
+				{
+					"name": "Get Post List",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 11|nuaeOjb9pMpAaWlyLB6bCN0ogYSQDftmTSq2Nt3i",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{url}}/posts",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"posts"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Detail Post",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 11|nuaeOjb9pMpAaWlyLB6bCN0ogYSQDftmTSq2Nt3i",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/posts/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"posts",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Post",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 9|2NpLjsZXAyo0mj5YubPmDdtmF9R7DQ9zbZ9MLXzx",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"Tutorial HTML untuk pemula\",\r\n    \"news_content\" : \"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut at earum voluptas fuga sed pariatur laboriosam magni! Quaerat eveniet quisquam, voluptas rem architecto distinctio nisi commodi dicta, fugiat, veritatis deserunt eum vero! Expedita accusantium velit ullam est rem iste, consequatur voluptatum corrupti asperiores aliquam quam aliquid doloremque tempore id beatae molestiae facere vel inventore. Reiciendis quod, sit delectus non tempora possimus beatae asperiores voluptatibus quam eaque distinctio? Fugit dolore hic, fuga, ea, nesciunt porro reprehenderit nulla quaerat praesentium quas sed. Illo est delectus saepe eum suscipit accusantium? Quis laboriosam excepturi quod placeat necessitatibus earum non inventore libero quibusdam dolorem fugit quos, ipsum voluptatum debitis similique. Tempora doloremque architecto ducimus odit, dignissimos est, rerum illum omnis porro facere dicta nesciunt perspiciatis. Officia tempore praesentium voluptatibus nesciunt laborum porro aspernatur aperiam rem asperiores dicta ad ipsa ipsum, nam animi consequatur incidunt consectetur nihil magni doloribus. Nobis eveniet facilis quia deleniti, explicabo ea porro repellendus. Veritatis enim asperiores qui doloremque ad esse, adipisci ipsa nulla illo soluta! Ad incidunt iusto ex adipisci fuga accusantium nesciunt sunt? Accusamus, delectus quisquam? Facilis expedita asperiores sit, placeat eum voluptatum quaerat ducimus quod saepe dolore beatae dolores aliquam corporis aspernatur architecto deleniti unde quae obcaecati assumenda. Voluptas quasi ab rerum eum omnis. Dolore voluptatibus hic corporis tenetur veniam consectetur consequuntur temporibus. Et rem pariatur dicta consequatur, omnis alias recusandae architecto accusamus culpa commodi, temporibus ratione? Recusandae non commodi, magnam animi distinctio sit dicta, velit culpa enim tempore maiores! Assumenda, qui beatae nostrum deleniti ab recusandae nisi nesciunt dolore dolor sequi numquam quae veritatis vero laboriosam doloribus! Sequi fugit, maiores optio aperiam nostrum ducimus blanditiis fugiat repellat! Laudantium totam labore eos consequatur consectetur, eius porro voluptas incidunt deserunt similique perferendis ipsum natus earum? Praesentium doloremque, tempora, nisi nobis voluptas facilis blanditiis beatae dolor quidem consectetur, ab voluptatibus nam?\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/posts",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Post",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 11|nuaeOjb9pMpAaWlyLB6bCN0ogYSQDftmTSq2Nt3i",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"Tutorial CSS untuk pemula\",\r\n    \"news_content\" : \"Isi konten udah di update. Aut at earum voluptas fuga sed pariatur laboriosam magni! Quaerat eveniet quisquam, voluptas rem architecto distinctio nisi commodi dicta, fugiat, veritatis deserunt eum vero! Expedita accusantium velit ullam est rem iste, consequatur voluptatum corrupti asperiores aliquam quam aliquid doloremque tempore id beatae molestiae facere vel inventore. Reiciendis quod, sit delectus non tempora possimus beatae asperiores voluptatibus quam eaque distinctio? Fugit dolore hic, fuga, ea, nesciunt porro reprehenderit nulla quaerat praesentium quas sed. Illo est delectus saepe eum suscipit accusantium? Quis laboriosam excepturi quod placeat necessitatibus earum non inventore libero quibusdam dolorem fugit quos, ipsum voluptatum debitis similique. Tempora doloremque architecto ducimus odit, dignissimos est, rerum illum omnis porro facere dicta nesciunt perspiciatis. Officia tempore praesentium voluptatibus nesciunt laborum porro aspernatur aperiam rem asperiores dicta ad ipsa ipsum, nam animi consequatur incidunt consectetur nihil magni doloribus. Nobis eveniet facilis quia deleniti, explicabo ea porro repellendus. Veritatis enim asperiores qui doloremque ad esse, adipisci ipsa nulla illo soluta! Ad incidunt iusto ex adipisci fuga accusantium nesciunt sunt? Accusamus, delectus quisquam? Facilis expedita asperiores sit, placeat eum voluptatum quaerat ducimus quod saepe dolore beatae dolores aliquam corporis aspernatur architecto deleniti unde quae obcaecati assumenda. Voluptas quasi ab rerum eum omnis. Dolore voluptatibus hic corporis tenetur veniam consectetur consequuntur temporibus. Et rem pariatur dicta consequatur, omnis alias recusandae architecto accusamus culpa commodi, temporibus ratione? Recusandae non commodi, magnam animi distinctio sit dicta, velit culpa enim tempore maiores! Assumenda, qui beatae nostrum deleniti ab recusandae nisi nesciunt dolore dolor sequi numquam quae veritatis vero laboriosam doloribus! Sequi fugit, maiores optio aperiam nostrum ducimus blanditiis fugiat repellat! Laudantium totam labore eos consequatur consectetur, eius porro voluptas incidunt deserunt similique perferendis ipsum natus earum? Praesentium doloremque, tempora, nisi nobis voluptas facilis blanditiis beatae dolor quidem consectetur, ab voluptatibus nam?\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/posts/5",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"posts",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Post",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 11|nuaeOjb9pMpAaWlyLB6bCN0ogYSQDftmTSq2Nt3i",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/posts/5",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"posts",
+								"5"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"toni@email.com\",\r\n    \"password\" : \"rahasia\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 11|nuaeOjb9pMpAaWlyLB6bCN0ogYSQDftmTSq2Nt3i",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/logout",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"logout"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Me",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 11|nuaeOjb9pMpAaWlyLB6bCN0ogYSQDftmTSq2Nt3i",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/me",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"me"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Comments",
+			"item": [
+				{
+					"name": "Create Comment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 14|LrWgKrgXmMdvbKClkZiSRdJjcZnGKgrVLQm5Hrcf",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"post_id\" : 3,\r\n    \"comments_contents\" : \"kak request tutorial javascript dong\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/comment",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"comment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Comment",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 14|LrWgKrgXmMdvbKClkZiSRdJjcZnGKgrVLQm5Hrcf",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"comments_contents\" : \"komentar ini saya update\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/comment/6",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"comment",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Comment",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 14|LrWgKrgXmMdvbKClkZiSRdJjcZnGKgrVLQm5Hrcf",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/comment/6",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"comment",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

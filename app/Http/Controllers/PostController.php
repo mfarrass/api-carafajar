@@ -12,16 +12,16 @@ class PostController extends Controller
 {
     public function index()
     {
-        // mendapatkan semua data all
+        // mendapatkan semua data all dan komentar
         $posts = Post::all();
-        return PostDetailResource::collection($posts->loadMissing('writer:id,username'));
+        return PostDetailResource::collection($posts->loadMissing(['writer:id,username', 'comments:id,post_id,user_id,comments_contents']));
     }
 
     public function show($id)
     {
-        // mendapatkan 1 data berdasarkan id 
+        // mendapatkan 1 data berdasarkan id dan komentar
         $post = Post::with('writer:id,username')->findOrFail($id);
-        return new PostDetailResource($post);
+        return new PostDetailResource($post->loadMissing(['writer:id,username', 'comments:id,post_id,user_id,comments_contents']));
     }
 
     public function store(Request $request)

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 12, 2024 at 09:26 PM
+-- Generation Time: May 16, 2024 at 11:20 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.1.25
 
@@ -36,6 +36,14 @@ CREATE TABLE `comments` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `comments`
+--
+
+INSERT INTO `comments` (`id`, `post_id`, `user_id`, `comments_contents`, `deleted_at`, `created_at`, `updated_at`) VALUES
+(1, 3, 2, 'keren, kak makasi informasinya', NULL, '2024-05-12 14:37:13', '2024-05-12 14:37:13'),
+(6, 3, 2, 'komentar ini saya update', NULL, '2024-05-13 13:34:59', '2024-05-16 07:52:47');
 
 -- --------------------------------------------------------
 
@@ -116,7 +124,9 @@ INSERT INTO `personal_access_tokens` (`id`, `tokenable_type`, `tokenable_id`, `n
 (5, 'App\\Models\\User', 1, 'user berhasil login', '1a966e5a04c544585d724c713594fb3619f546c24c8ebc00d3bace77f6d3d75a', '[\"*\"]', '2024-05-06 03:42:53', '2024-05-06 02:29:31', '2024-05-06 03:42:53'),
 (6, 'App\\Models\\User', 1, 'user berhasil login', 'ea6454d08360c646c6f3a60fbc455a0d795164938b21fa4b6a7fc452c13736a7', '[\"*\"]', '2024-05-06 03:28:22', '2024-05-06 03:27:02', '2024-05-06 03:28:22'),
 (9, 'App\\Models\\User', 3, 'user berhasil login', 'a13009be9a44c15e9b3e71e768c94619652e777428f6139250a99de3f32610ff', '[\"*\"]', '2024-05-06 13:07:30', '2024-05-06 13:06:41', '2024-05-06 13:07:30'),
-(11, 'App\\Models\\User', 3, 'user berhasil login', '0e6e8738e54e1e4564710e7b99bfcf58f1be54e0edbc926f04d8b9bb83a589c6', '[\"*\"]', '2024-05-07 08:43:26', '2024-05-07 08:37:32', '2024-05-07 08:43:26');
+(12, 'App\\Models\\User', 2, 'user berhasil login', 'd21df81d35a81c926700c7ab6a74903d04894aae45e8275524ee8b96614bb8ea', '[\"*\"]', '2024-05-13 14:32:28', '2024-05-12 13:41:19', '2024-05-13 14:32:28'),
+(13, 'App\\Models\\User', 3, 'user berhasil login', '86cf665b0be4b8d3a429bfabbfde232bde9c67b25cd2b76133188718b1a9e6c6', '[\"*\"]', '2024-05-14 13:21:57', '2024-05-13 14:33:48', '2024-05-14 13:21:57'),
+(14, 'App\\Models\\User', 2, 'user berhasil login', '9632d51161e6b7711cbfe35587fd31e8d316e44ca3f92f58e34b47d97546e7bc', '[\"*\"]', '2024-05-16 07:52:47', '2024-05-14 13:24:35', '2024-05-16 07:52:47');
 
 -- --------------------------------------------------------
 
@@ -234,7 +244,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -252,7 +262,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `personal_access_tokens`
 --
 ALTER TABLE `personal_access_tokens`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `posts`
